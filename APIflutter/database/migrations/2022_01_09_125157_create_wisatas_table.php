@@ -15,6 +15,7 @@ class CreateWisatasTable extends Migration
     {
         Schema::create('wisatas', function (Blueprint $table) {
             $table->id();
+            $table->string('pelanggan');
             $table->timestamps();
         });
     }
