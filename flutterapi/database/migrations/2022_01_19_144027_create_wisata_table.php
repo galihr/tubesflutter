@@ -15,6 +15,10 @@ class CreateWisataTable extends Migration
     {
         Schema::create('wisata', function (Blueprint $table) {
             $table->id();
+            $table->string('pelanggan');
+            $table->integer('harga');
+            $table->longText('desc')->nullable();
+            $table->date('tanggal');
             $table->timestamps();
         });
     }
