@@ -14,3 +14,5 @@
 */
 
 $router->post('/wisata','WisataController@create');
+
+$router->get('/wisata','WisataController@index');
