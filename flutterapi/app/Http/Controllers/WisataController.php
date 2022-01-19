@@ -15,7 +15,44 @@ class WisataController extends Controller
     }
     public function index()
     {
-        $book = Book::all();
-        return response()->json($book);
+        $wisata = wisata::all();
+        return response()->json($wisata);
+    }
+    public function show($id)
+    {
+        $wisata = wisata::find($id);
+        return response()->json($wisata);
+    }
+    public function update(Request $request, $id)
+    {
+        $wisata = wisata::find($id);
+        
+        if (!$wisata) {
+            return response()->json(['message' => 'Data not found'], 404);
+        }
+        
+        $this->validate($request, [
+            "pelanggan" => "required|unique:wisata",
+            "harga" => "required",
+            "status" => "required"
+        ]);
+
+        $data = $request->all();
+        $wisata->fill($data);
+        $wisata->save();
+
+        return response()->json($wisata);
+    }
+    public function destroy($id)
+    {
+        $wisata = wisata::find($id);
+        
+        if (!$wisata) {
+            return response()->json(['message' => 'Data not found'], 404);
+        }
+
+        $wisata->delete();
+
+        return response()->json(['message' => 'Data deleted successfully'], 200);
     }
 } 

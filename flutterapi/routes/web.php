@@ -16,3 +16,9 @@
 $router->post('/wisata','WisataController@create');
 
 $router->get('/wisata','WisataController@index');
+
+$router->get('/wisata/{id}','WisataController@show');
+
+$router->put('/wisata/{id}','WisataController@update');
+
+$router->delete('/wisata/{id}','WisataController@destroy');
