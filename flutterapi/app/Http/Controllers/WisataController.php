@@ -13,4 +13,9 @@ class WisataController extends Controller
 
         return response()->json($wisata);
     }
+    public function index()
+    {
+        $book = Book::all();
+        return response()->json($book);
+    }
 } 

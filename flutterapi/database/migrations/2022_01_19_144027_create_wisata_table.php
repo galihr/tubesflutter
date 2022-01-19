@@ -18,7 +18,7 @@ class CreateWisataTable extends Migration
             $table->string('pelanggan');
             $table->integer('harga');
             $table->longText('desc')->nullable();
-            $table->date('tanggal');
+            $table->enum('status',['new','second']);;
             $table->timestamps();
         });
     }

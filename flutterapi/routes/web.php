@@ -13,5 +13,4 @@
 |
 */
 
-$$router->post('/wisata','WisataController@create');
-
+$router->post('/wisata','WisataController@create');
