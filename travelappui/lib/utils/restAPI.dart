@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travelappui/models/placesModel.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 
 class RESTAPI {
   List<PlaceModel> dummyFeatured = [
