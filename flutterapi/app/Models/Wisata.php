@@ -13,7 +13,7 @@ class Wisata extends Model
      * @var array
      */
     protected $fillable = [
-        'pelanggan', 'harga','desc','status',
+        'nama', 'kategor','gambar_url','lokasi','deskripsi','harga',
     ];
 
 } 

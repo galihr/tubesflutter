@@ -32,9 +32,12 @@ class WisataController extends Controller
         }
         
         $this->validate($request, [
-            "pelanggan" => "required|unique:wisata",
+            "nama" => "required|unique:wisata",
+            "kategori" => "required",
+            "gambar_url" => "required",
+            "lokasi" => "required",
+            "deskripsi" => "required",
             "harga" => "required",
-            "status" => "required"
         ]);
 
         $data = $request->all();
