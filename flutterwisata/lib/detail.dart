@@ -23,20 +23,30 @@ class DetailScreen extends StatelessWidget {
               },
             )
         ),
-        body: Container(
-          child: Column(children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.only(left: 10),
-              child: Text(
+         body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            Text(
                 komunitas.deskripsi.toString(),
                 style: TextStyle(color: Colors.black, fontSize: 15),
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(bottom: 15),
-            ),
-          ]),
-        ),
+        // body: Container(
+        //   child: Column(children: <Widget>[
+        //     Padding(
+        //       padding: const EdgeInsets.only(left: 10),
+        //       child: Text(
+        //         komunitas.deskripsi.toString(),
+        //         style: TextStyle(color: Colors.black, fontSize: 15),
+        //       ),
+        //     ),
+        //     Padding(
+        //       padding: EdgeInsets.only(bottom: 15),
+        //     ),
+        //   ]),
+        // ),
+        ])
+         )
       ),
     );
 }

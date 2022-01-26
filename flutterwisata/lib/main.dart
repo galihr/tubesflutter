@@ -4,6 +4,7 @@ import 'package:flutterwisata/login.dart';
 import 'package:flutterwisata/wisata.dart';
 
 import 'detail.dart';
+import 'listdrawer.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'wisata',
+      title: 'Wisata',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -55,8 +56,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       drawer: NavDrawer(),
+        
       appBar: AppBar(
-        title: Text("Wisata Purwakarta"),
+        title: Text("Halaman Wisata"),
       ),
       body: FutureBuilder<ListWisata>(
           future: listWisata,

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutterwisata/main.dart';
 
+import 'listdrawer.dart';
+
 
 class LoginPage extends StatefulWidget {
   @override
@@ -12,6 +14,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF42A5F5),
+        drawer: NavDrawer(),
       appBar: AppBar(
         backgroundColor: Color(0xFF42A5F5),
         title: Text("Login Page"),
