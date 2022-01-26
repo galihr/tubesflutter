@@ -16,7 +16,9 @@ class WisataController extends Controller
     public function index()
     {
         $wisata = wisata::all();
-        return response()->json($wisata);
+        return response()->json([
+            "wisata" => $wisata
+        ]);   
     }
     public function show($id)
     {
@@ -34,7 +36,7 @@ class WisataController extends Controller
         $this->validate($request, [
             "nama" => "required|unique:wisata",
             "kategori" => "required",
-            "gambar_url" => "required",
+            "gambarUrl" => "required",
             "lokasi" => "required",
             "deskripsi" => "required",
             "harga" => "required",

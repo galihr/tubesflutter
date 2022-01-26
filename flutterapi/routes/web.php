@@ -15,7 +15,7 @@
 
 $router->post('/wisata','WisataController@create');
 
-$router->get('/wisata','WisataController@index');
+$router->get('api/wisata','WisataController@index');
 
 $router->get('/wisata/{id}','WisataController@show');
 

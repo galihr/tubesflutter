@@ -17,7 +17,7 @@ class CreateWisataTable extends Migration
             $table->id();
             $table->string('nama');
             $table->string('kategori');
-            $table->string('gambar_url', 100)->nullable();
+            $table->string('gambarUrl', 100)->nullable();
             $table->string('lokasi');
             $table->string('deskripsi');
             $table->integer('harga');
